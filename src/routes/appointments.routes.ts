@@ -7,7 +7,8 @@ const appointmentsRoute = Router();
 const appointmentsRepository = new AppointmentsRepository();
 
 appointmentsRoute.get('/', (request, response) => {
-  return response.json({ message: 'ok' });
+  const appointments = appointmentsRepository.all();
+  return response.json(appointments);
 });
 
 appointmentsRoute.post('/', (request, response) => {
