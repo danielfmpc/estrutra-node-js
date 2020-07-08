@@ -2,12 +2,12 @@ import { Router } from 'express';
 import { uuid } from "uuidv4";
 const appointmentsRoute = Router();
 
-interface DTO{
+interface AppointmentsDTO{
   provider: string,
   date: Date
 };
 
-const appointments:DTO[] = [];
+const appointments:AppointmentsDTO[] = [];
 appointmentsRoute.get('/', (request, response) => {
   return response.json(appointments);
 });
