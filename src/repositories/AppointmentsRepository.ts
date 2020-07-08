@@ -10,6 +10,7 @@ class AppointmentsRepository {
 
   /**
    * findByDate
+   * Verifica se existe agendamento nesse horario
    */
   public findByDate(date: Date): Appointment | null {
     const findAppointment = this.appointments.find(appointment =>
@@ -18,6 +19,10 @@ class AppointmentsRepository {
     return findAppointment || null;
   }
 
+  /**
+   * create
+   * cria o agendamento
+   */
   public create(provider: string, date: Date): Appointment {
     const appointment = new Appointment(provider, date);
     this.appointments.push(appointment);
