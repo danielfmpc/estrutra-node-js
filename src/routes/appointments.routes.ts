@@ -6,4 +6,8 @@ appointmentsRoute.get('/', (request, response) => {
   return response.json({ message: 'ok' });
 });
 
+appointmentsRoute.post('/appointments/:id', (request, response) => {
+  return response.json({ message: 'ok' });
+});
+
 export default appointmentsRoute;
