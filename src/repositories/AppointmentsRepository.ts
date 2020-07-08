@@ -9,6 +9,14 @@ class AppointmentsRepository {
   }
 
   /**
+   * all
+   * retorna todos os dados
+   */
+  public all(): Appointment[] {
+    return this.appointments;
+  }
+
+  /**
    * findByDate
    * Verifica se existe agendamento nesse horario
    */
