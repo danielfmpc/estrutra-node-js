@@ -16,6 +16,7 @@ appointmentsRoute.post('/', (request, response) => {
   const { provider, date } = request.body;
 
   const appointment = {
+    id: uuid(),
     provider,
     date,
   }
