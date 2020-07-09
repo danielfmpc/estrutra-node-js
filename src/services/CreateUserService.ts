@@ -1,5 +1,6 @@
 import { getRepository } from 'typeorm';
 import User from '../models/Users';
+import {} from 'bcryptjs';
 
 interface RequestDTO {
   name: string;
