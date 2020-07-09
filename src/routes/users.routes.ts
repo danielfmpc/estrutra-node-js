@@ -32,12 +32,14 @@ usersRoute.patch(
   async (request, response) => {
     try {
       const updateAvatar = new UpdateUserAvatarService();
-      await updateAvatar.execute({
+      const user = await updateAvatar.execute({
         user_id: request.user.id,
         avatarFilename: request.file.filename,
       });
 
-      return response.json({ ok: true });
+      delete user.password;
+
+      return response.json(user);
     } catch (error) {
       return response.status(400).json({ error: error.message });
     }
