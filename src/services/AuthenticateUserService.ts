@@ -10,6 +10,7 @@ interface RequestDTO {
 
 interface ResponseDTO {
   user: User;
+  token: string;
 }
 
 class AuthenticateUserService {
@@ -32,7 +33,7 @@ class AuthenticateUserService {
       expiresIn: '1d',
     });
 
-    return { user };
+    return { user, token };
   }
 }
 
