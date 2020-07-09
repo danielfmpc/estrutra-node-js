@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev:server": "ts-node-dev --inspect --transpileOnly --ignore node_modules src"
+    "dev:server": "ts-node-dev --inspect --transpileOnly --ignore node_modules src",
+    "start": "ts-node src/index.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
     "date-fns": "^2.14.0",
