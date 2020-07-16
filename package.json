@@ -4,9 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev:server": "ts-node-dev --inspect --transpileOnly --ignore node_modules src",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "build": "tsc",
     "start": "ts-node src/index.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+    "dev:server": "ts-node-dev --inspect --transpileOnly --ignore node_modules src/index.ts"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
